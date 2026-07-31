@@ -18,8 +18,11 @@
 
 <script>
 function sprawdz() {
-  let odp =
-document.getElementById("odpowiedz").value.toLowerCase().trim();
+  let odp = document.getElementById("odpowiedz")
+    .value
+    .toLowerCase()
+    .replace(/\./g, "")   // usuwa kropki
+    .trim();
 
   let poprawneOdpowiedzi = [
     "Sybilla",
